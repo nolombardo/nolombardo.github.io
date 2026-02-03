@@ -1,0 +1,294 @@
+/* CSS Variables */
+
+:root {
+  --primary-red: #7a1e2d;
+  --background-dark: #2f2f33;
+  --background-light: #f4f5f7;
+  --surface-dark: #3a3a40;
+  --text-dark: #1f1f23;
+  --text-light: #f2f2f2;
+  --header-size: 80px;
+}
+
+/* Base / Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+section {
+  scroll-margin-top: var(--header-size);
+}
+
+/* Header / Navigation */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-size);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-red);
+  z-index: 100;
+}
+
+#title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#header-text, #header-alt {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#navbar {
+  display: flex;
+  gap: 1.4rem;
+  margin-right: 1.2rem;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* Welcome Section */
+
+#welcome-section {
+  height: 100vh;
+  background-color: var(--surface-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* About Section */
+
+#about-section {
+  padding-bottom: 30px;
+}
+
+#about-wrapper {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+
+#personal-photo-placeholder {
+  height: 18rem;
+  width: 40rem;
+  background-color: var(--background-light);
+}
+
+/* Projects Section */
+
+#project-section {
+  background-color: var(--background-light);
+  padding-bottom: 120px;
+}
+
+#project-section h2 {
+  color: var(--text-dark);
+}
+
+h2 {
+  padding-top: calc(var(--header-size) + 24px);
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+#project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 80px;
+  padding: 0 40px;
+}
+
+/* Project Card */
+
+.project-tile {
+  background-color: var(--surface-dark);
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.project-icon {
+  font-size: 160px;
+}
+
+.project-title {
+  margin: 12px 0 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Project Actions (Buttons)*/
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.project-actions a,
+.project-actions button {
+  background: transparent;
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.project-actions a:hover,
+.project-actions button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer / Contact */
+
+#contact-section {
+  background-color: var(--primary-red);
+  padding: 40px 0;
+  text-align: center;
+}
+
+#profile-link {
+  color: var(--text-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Modal (Live Demo)*/
+
+#demo-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#demo-modal[hidden] {
+  display: none;
+}
+
+#demo-modal .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#demo-modal .modal-content {
+  position: relative;
+  background: var(--background-light);
+  width: 90%;
+  max-width: 900px;
+  height: 80%;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#demo-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+
+@media (min-width: 700px) {
+  html {
+    font-size: 20px;
+  }
+
+  :root {
+    --header-size: 100px;
+  }
+
+  .project-img {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    font-size: 12px;
+  }
+
+  :root {
+    --header-size: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+  #header-text {
+    display: none;
+  }
+
+  #header-alt {
+    display: block;
+  }
+}

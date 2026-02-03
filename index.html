@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div id="title-wrapper">
+        <p id="header-text">Nolan Lombardo</p>
+        <p id="header-alt" hidden>NL</p>
+      </div>
+      <nav id="navbar">
+        <a class="nav-link" href="#welcome-section">Welcome</a>
+        <a class="nav-link" href="#about-section">About</a>
+        <a class="nav-link" href="#project-section">Projects</a>
+        <a class="nav-link" href="#contact-section">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome-section">
+        <h1>Welcome to my portfolio</h1>
+      </section>
+
+      <section id="about-section">
+        <h2>About me</h2>
+        <div id="about-wrapper">
+          <div id="personal-photo-placeholder"></div>
+          <div id="about-body">
+            <p>I'm Nolan Lombardo. I do computers good. Look at me doing computers right now. Any good company would love to hire a good computer guy like me.</p>
+            <p>My favorite color is purple. I think public transit is awesome. Blah blah blah. I'm so cool. The people love me. So will you.</p>
+            <p>Thanks for giving me the opportunity to enlighten you as to how amazing your life will be with me at your company. I look forward to working with you. Swag.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="project-section">
+        <h2>Here are my projects</h2>
+
+        <div id="project-gallery">
+          <article class="project-tile">
+            <div class="project-icon">
+              <i class="fa-solid fa-calculator project-icon"></i>
+            </div>
+            <h3 class="project-title">Calculator App</h3>
+            <div class="project-actions">
+              <a href="" target="_blank">
+                View Project
+              </a>
+                <button class="demo-btn" data-demo="https://example.com/demo">
+                  Live Demo
+                </button>
+            </div>
+          </article>
+
+          <article class="project-tile">
+            <div class="project-icon">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h3 class="project-title">Clock App</h3>
+            <div class="project-actions">
+              <a href="" target="_blank">
+                View Project
+              </a>
+                <button class="demo-btn" data-demo="https://example.com/demo">
+                  Live Demo
+                </button>
+            </div>
+          </article>
+
+          <article class="project-tile">
+            <div class="project-icon">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <h3 class="project-title">Weather App</h3>
+            <div class="project-actions">
+              <a href="" target="_blank">
+                View Project
+              </a>
+                <button class="demo-btn" data-demo="https://example.com/demo">
+                  Live Demo
+                </button>
+            </div>
+          </article>
+
+          <article class="project-tile">
+            <div class="project-icon">
+              <i class="fa-regular fa-note-sticky"></i>
+            </div>
+            <h3 class="project-title">Note-Taking App</h3>
+            <div class="project-actions">
+              <a href="" target="_blank">
+                View Project
+              </a>
+                <button class="demo-btn" data-demo="https://example.com/demo">
+                  Live Demo
+                </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact-section">
+      <h2>Contact me</h2>
+      <a
+        id="profile-link"
+        href=""
+        target="_blank"
+      >
+        Talk to me at blah blah
+      </a>
+    </footer>
+
+    <div id="demo-modal" hidden>
+      <div class="overlay"></div>
+      <div class="modal-content">
+        <button id="close-modal">Close</button>
+        <iframe id="demo-frame" loading="lazy"></iframe>
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
