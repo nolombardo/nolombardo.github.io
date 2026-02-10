@@ -18,6 +18,11 @@
   box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 html {
   font-size: 16px;
 }
@@ -30,6 +35,9 @@ body {
 }
 
 section {
+  margin: 0;
+  padding: 10px 20px;
+  min-height: 100vh;
   scroll-margin-top: var(--header-size);
 }
 
@@ -57,6 +65,10 @@ header {
   margin-right: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+#header-alt {
+  letter-spacing: 0.1em;
 }
 
 #navbar {
@@ -95,7 +107,9 @@ h1 {
 /* About Section */
 
 #about-section {
-  padding-bottom: 30px;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding-bottom: 60px;
 }
 
 #about-wrapper {
@@ -105,11 +119,19 @@ h1 {
   gap: 3rem;
 }
 
-#personal-photo-placeholder {
-  height: 18rem;
-  width: 40rem;
-  background-color: var(--background-light);
+#about-body {
+  max-width: 500px;
+  margin: auto;
 }
+
+#personal-photo {
+  margin-top: 40px;
+  height: 15rem;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
 
 /* Projects Section */
 
@@ -154,8 +176,8 @@ h2 {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
 
-.project-icon {
-  font-size: 160px;
+.project-icon i {
+  font-size: 8rem;
 }
 
 .project-title {
@@ -196,14 +218,42 @@ h2 {
 
 #contact-section {
   background-color: var(--primary-red);
-  padding: 40px 0;
+  color: var(--text-light);
+  padding: 48px 20px;
   text-align: center;
 }
 
-#profile-link {
+#contact-section h2 {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-light);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.85;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.contact-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.contact-links i {
+  font-size: 1.4rem;
 }
 
 /* Modal (Live Demo)*/
@@ -290,5 +340,16 @@ h2 {
 
   #header-alt {
     display: block;
+  }
+
+  #personal-photo {
+    height: 8rem;
+  }
+
+  #about-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    gap: 1.5rem;
   }
 }
