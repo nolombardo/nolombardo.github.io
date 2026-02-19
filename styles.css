@@ -359,11 +359,6 @@ h2 {
   #personal-photo {
     height: 8rem;
   }
-  
-
-  #personal-photo {
-    height: 8rem;
-  }
 
   #about-wrapper {
     margin-left: 1rem;
@@ -371,7 +366,7 @@ h2 {
     display: flex;
     gap: 1.5rem;
   }
-  
+
   #header-alt {
     display: block;
   }
