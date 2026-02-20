@@ -18,7 +18,7 @@ This repository contains the source code for my personal portfolio website, whic
 
 ## Live Site
 
-nolombardo.github.io
+[nolombardo.github.io](https://nolombardo.github.io/)
 
 ## Purpose
 
